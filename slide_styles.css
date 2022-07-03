@@ -2,6 +2,7 @@
 .slideImg {
   height: 280px;
   width: auto;
+  max-width: 1fr;
   margin: auto;
   display: block;
 }
