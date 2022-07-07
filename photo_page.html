@@ -4,55 +4,65 @@
   <head>
     <meta charset="utf-8">
     <title>Savory</title>
-    <link rel="stylesheet" type="text/css" href="./photo_page_style.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
+
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Load our React component. -->
+  <script src="./scripts/scroller/useInfiniteScroll.js"></script>
+  <script src="./scripts/scroller/list.js"></script>
 
   <body>
 
     <div class="container">
 
       <header>
-        <img src="./index_photos/header_photo.jpg" class="headerImg">
+        <img src="./background/300sq/background_transparent.png" class="headerImg" style="position: relative;">
+        <img src="./background/header/header_img.png" class="headerImg" style="position: absolute;">
       </header>
 
       <main>
-	<div class="mainContent">
-	  <div class="navbar">
-	    <div class="expandbar">
-	      <p class="expandButton">=</p>
+        <div class="mainContent">
+          <div class="navbar">
+            <div class="expandbar">
+              <p class="expandButton">=</p>
+                  </div>
+            <div class="indexbar">
+              <a href=""><p class="indButton">Daniel Du's Portfolio</p></a>
             </div>
-	    <div class="indexbar">
-	      <a href=""><p class="indButton">Daniel Du's Portfolio</p></a>
-	    </div>
-	    <div class="menubar">
-	      <a href=""><p class="navButton a">Publications</p></a>
-	      <a href=""><p class="navButton b">Published Code</p></a>
-	      <a href=""><p class="navButton c">3D Modeling Projects</p></a>
-	      <a href=""><p class="navButton d">Conference Proceedings</p></a>
-	      <a href=""><p class="navButton e">Photos</p></a>
+            <div class="menubar">
+              <a href=""><p class="navButton a">Publications</p></a>
+              <a href=""><p class="navButton b">Published Code</p></a>
+              <a href=""><p class="navButton c">3D Modeling Projects</p></a>
+              <a href=""><p class="navButton d">Conference Proceedings</p></a>
+              <a href=""><p class="navButton e">Photos</p></a>
+                  </div>
+          </div>
+          <div class="photoSec">
+            <div class="photoCard">
+              <img src="./published_code_images/AmePls.gif" class="photoImg"/>
             </div>
-	  </div>
-	  <div class="photoSec">
-      <div class="photoCard">
-        <img src="./published_code_images/AmePls.gif" class="photoImg"/>
-      </div>
-      <div class="photoCard">
-        <img src="./published_code_images/20180704_092921.jpg" class="photoImg"/>
-      </div>
-      <div class="photoCard">
-        <img src="./published_code_images/LumineBruh.gif" class="photoImg"/>
-      </div>
-      <div class="photoCard">
-        <img src="./published_code_images/AmePls.gif" class="photoImg"/>
-      </div>
-      <div class="photoCard">
-        <img src="./published_code_images/20180704_092921.jpg" class="photoImg"/>
-      </div>
-      <div class="photoCard">
-        <img src="./published_code_images/LumineBruh.gif" class="photoImg"/>
-      </div>
-	  </div>
-	</div>
+            <div class="photoCard">
+              <img src="./published_code_images/20180704_092921.jpg" class="photoImg"/>
+            </div>
+            <div class="photoCard">
+              <img src="./published_code_images/LumineBruh.gif" class="photoImg"/>
+            </div>
+            <div class="photoCard">
+              <img src="./published_code_images/AmePls.gif" class="photoImg"/>
+            </div>
+            <div class="photoCard">
+              <img src="./published_code_images/20180704_092921.jpg" class="photoImg"/>
+            </div>
+            <div class="photoCard">
+              <img src="./published_code_images/LumineBruh.gif" class="photoImg"/>
+            </div>
+          </div>
+        </div>
       </main>
 
       <footer>

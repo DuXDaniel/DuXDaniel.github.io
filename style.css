@@ -12,20 +12,23 @@ body {
 .container {
   display: block;
   box-sizing: border-box;
-  background-color: rgba(255,255,255,0.75);
-  box-shadow: 0 0px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255,255,255,1);
+  //box-shadow: 0 0px 5px 5px rgba(0, 0, 0, 0.5);
   min-width: 480px;
-  max-width: 95%;
+  max-width: 100%;
   margin: auto;
 }
 
 header {
   display: block;
   margin-top: 0;
-  background-color: rgba(24,95,69,1);
+  background-color: rgba(255,255,255,0.25);
   text-align: left;
   min-width: 100%;
   margin-bottom: 0;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .headerText {
@@ -49,6 +52,8 @@ header {
   object-fit: cover;
   object-position: 50% 50%;
   opacity: 50%;
+  top: 0;
+  left: 0;
 }
 
 .mainContent {
@@ -57,14 +62,14 @@ header {
   justify-content: center;
   align-items: center
   align-content: center;
-  width: clamp(480px, 80%, 7680);
+  width: clamp(480px, 100%, 7680);
 
 }
 
 .navbar {
 
   display: flex;
-  border: double;
+  //border: double;
   background-color: rgba(255,255,255,1);
 
 }
@@ -223,6 +228,34 @@ img {
   grid-column: 1;
   height: 100%;
   width: 100%;
+  object-fit: cover;
+}
+
+.photoSec {
+  display: grid;
+  margin: 20px;
+  justify-items: center;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  // grid-auto-columns: minmax(100px, 300px);
+  //grid-row-gap: 2vh;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.photoCard {
+  background-color: rgba(255,255,255,1);
+  display: block;
+  box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.photoImg {
+  height: 100%;
+  width: 100%;
+  display: block;
   object-fit: cover;
 }
 
