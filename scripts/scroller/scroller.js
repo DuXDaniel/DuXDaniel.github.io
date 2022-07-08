@@ -1,60 +1,64 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-import InfiniteScroll from 'react-infinite-scroller';
-import Papa from 'papaparse';
+// load csv data
+// load dirImages
+// load curCount
+const imageSources = [ // Put your image sources in this list
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif'
+];
 
-class scroller extends React.Component {
+numLoaded = 0;
 
-    constructor(props) {
-        super(props);
+for (let i = 0; i < imageSources.length-1; i++) // Change this 5 to however many images you have (or use for ... in) 
+{ 
+    let divele = document.createElement("div");
+    divele.className = "photoCard";
+    let imgele = document.createElement("img");
+    imgele.className = "photoImg";
+    imgele.setAttribute("src", imageSources[i]);
+    divele.appendChild(imgele)
+    document.getElementById("photoSec").appendChild(divele);
+    numLoaded++;
+}
 
-        this.state = {
-            data: []
-        };
+// tweak num loaded to load based on size of screen etc etc etc
 
-        this.getData = this.getData.bind(this);
+// Check to see if scrolling near bottom of page; load more photos
+window.addEventListener('scroll', () => {
+    if (window.scrollY + window.innerHeight >= document.body.offsetHeight - 1000) 
+    {
+        console.log("sup");
+        getPhotos();
+        console.log("supafter");
     }
+});
 
-    componentWillMount() {
-        this.getCsvData();
+function getPhotos()
+{
+    for (let i = 0; i < imageSources.length-1; i++) // Change this 5 to however many images you have (or use for ... in) 
+    { 
+        if (numLoaded >= imageSources.length)
+        {
+            let divele = document.createElement("div");
+            divele.className = "photoCard";
+            let imgele = document.createElement("img");
+            imgele.className = "photoImg";
+            imgele.setAttribute("src", imageSources[i]);
+            divele.appendChild(imgele)
+            document.getElementById("photoSec").appendChild(divele);
+            numLoaded++;
+        }
     }
-
-    fetchCsv() {
-        return fetch('/data/data.csv').then(function (response) {
-            let reader = response.body.getReader();
-            let decoder = new TextDecoder('utf-8');
-
-            return reader.read().then(function (result) {
-                return decoder.decode(result.value);
-            });
-        });
-    }
-
-    getData(result) {
-        this.setState({data: result.data});
-    }
-
-    async getCsvData() {
-        let csvData = await this.fetchCsv();
-
-        Papa.parse(csvData, {
-            complete: this.getData
-        });
-    }
-
-    render() {
-      return (
-        <InfiniteScroll
-            pageStart={0}
-            loadMore={loadFunc}
-            hasMore={true || false}
-            loader={<div className="loader" key={0}>Loading ...</div>}
-            useWindow={false}
-        >
-            {data}
-        </InfiniteScroll>
-        );
-    }
-  }
-   
-ReactDOM.render(<scroller />, document.getElementById('photoSec'));
+    page++;
+    loading.classList.remove("show");
+};

@@ -34,7 +34,8 @@
 
     }
   }
-//prev/next functionality
+
+  //prev/next functionality
   links = document.querySelectorAll('.slideshow-container a');
 
   for (i = 0; i < links.length; i++) {
