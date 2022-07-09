@@ -71,7 +71,6 @@ else
 window.addEventListener('resize', () => {
     win_height_size = window.innerHeight;
     win_width_size = window.innerWidth;
-    console.log(win_width_size)
     // check size of window and redefine what appears inside navbar
 
     if (expandbarLoaded == 1)
