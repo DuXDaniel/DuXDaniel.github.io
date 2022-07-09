@@ -36,15 +36,81 @@ const imageSources = [ // Put your image sources in this list
 './published_code_images/LumineBruh.gif',
 './published_code_images/AmePls.gif',
 './published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif'
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg',
+'./published_code_images/LumineBruh.gif',
+'./published_code_images/AmePls.gif',
+'./published_code_images/20180704_092921.jpg'
 ];
 
 let testele = document.createElement("img");
 testele.className = "photoImg";
 document.getElementById("photoSec").appendChild(testele);
 numLoaded = 0;
-win_height_size = window.innerWidth;
-win_width_size = window.innerHeight;
+win_height_size = window.innerHeight;
+win_width_size = window.innerWidth;
 img_height_size = testele.clientHeight;
 img_width_size = testele.clientWidth;
 testele.remove();
@@ -84,14 +150,13 @@ function getPhotos()
         let testele = document.createElement("img");
         testele.className = "photoImg";
         document.getElementById("photoSec").appendChild(testele);
-        win_height_size = window.innerWidth;
-        win_width_size = window.innerHeight;
+        win_height_size = window.innerHeight;
+        win_width_size = window.innerWidth;
         img_height_size = testele.clientHeight;
         img_width_size = testele.clientWidth;
         testele.remove();
 
         numImgPerRow = Math.floor(win_width_size / img_width_size);
-        console.log(numImgPerRow);
 
         for (let i = 0; i < numImgPerRow; i++) // Change this 5 to however many images you have (or use for ... in) 
         { 

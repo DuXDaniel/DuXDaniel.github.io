@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <title>Savory</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Space+Mono&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -14,34 +18,15 @@
       <header>
         <img src="./background/300sq/background_transparent.png" class="headerImg" style="position: relative;">
         <img src="./background/header/header_img.png" class="headerImg" style="position: absolute;">
+        <p class="headerTitle">Daniel Du's<br>Portfolio</p>
+        <p class="headerText"><a href="mailto:dxd2001@columbia.edu">dxd2001@columbia.edu</a>&nbsp|&nbsp<a href="https://github.com/DuXDaniel">GitHub</a> | <a href="https://www.linkedin.com/in/dudanielx/">LinkedIn</a> | <a href="https://twitter.com/DuXDaniel">Twitter</a></p>
       </header>
 
       <main>
-	<div class="mainContent">
-	  <div class="navbar">
-      <!--
-	    <div class="expandbar">
-	      expand button here (only appears when screen is small)
-      </div>
-      -->
-      <!--
-	    <div class="indexbar">
-	      returns to the home page by clicking on this
-	    </div>
-      -->
-      <!--
-        make sure to change this as a function of screen size into expandbar
-	    <div class="menubar">
-	      <a href=""><p class="navButton a">Publications</p></a>
-	      <a href=""><p class="navButton b">Published Code</p></a>
-	      <a href=""><p class="navButton c">3D Modeling Projects</p></a>
-	      <a href=""><p class="navButton d">Conference Proceedings</p></a>
-	      <a href=""><p class="navButton e">Photos</p></a>
-      </div>
-      -->
-	  </div>
-	  <div class="newsSec" id="newsSec"></div>
-	</div>
+        <div class="mainContent">
+          <div class="navbar" id="navbar"></div>
+          <div class="newsSec" id="newsSec"></div>
+        </div>
       </main>
 
       <footer>
@@ -54,3 +39,4 @@
 </html>
 
 <script src="./scripts/news_scroller.js"></script>
+<script src="./scripts/navbar.js"></script>

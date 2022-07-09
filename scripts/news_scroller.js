@@ -47,15 +47,14 @@ testimg.setAttribute("src", imageSources[0]);
 testele.appendChild(testimg);
 document.getElementById("newsSec").appendChild(testele);
 numLoaded = 0;
-win_height_size = window.innerWidth;
-win_width_size = window.innerHeight;
+win_height_size = window.innerHeight;
+win_width_size = window.innerWidth;
 img_height_size = testele.clientHeight;
 img_width_size = testele.clientWidth;
 testimg.remove();
 testele.remove();
 
 numRows = Math.ceil(win_height_size / img_height_size);
-console.log(numRows);
 
 for (let i = 0; i < numRows; i++) // Change this 5 to however many images you have (or use for ... in) 
 { 
@@ -92,8 +91,8 @@ function getPhotos()
         testimg.setAttribute("src", imageSources[0]);
         testele.appendChild(testimg);
         document.getElementById("newsSec").appendChild(testele);
-        win_height_size = window.innerWidth;
-        win_width_size = window.innerHeight;
+        win_height_size = window.innerHeight;
+        win_width_size = window.innerWidth;
         img_height_size = testele.clientHeight;
         img_width_size = testele.clientWidth;
         testimg.remove();

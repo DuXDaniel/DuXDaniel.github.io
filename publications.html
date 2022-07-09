@@ -4,10 +4,11 @@
   <head>
     <meta charset="utf-8">
     <title>Savory</title>
-    <link rel="stylesheet" type="text/css" href="reset.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Space+Mono&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -21,21 +22,7 @@
 
       <main>
         <div class="mainContent">
-          <div class="navbar">
-            <div class="expandbar">
-              <p class="expandButton">=</p>
-                  </div>
-            <div class="indexbar">
-              <a href=""><p class="indButton">Daniel Du's Portfolio</p></a>
-            </div>
-            <div class="menubar">
-              <a href=""><p class="navButton a">Publications</p></a>
-              <a href=""><p class="navButton b">Published Code</p></a>
-              <a href=""><p class="navButton c">3D Modeling Projects</p></a>
-              <a href=""><p class="navButton d">Conference Proceedings</p></a>
-              <a href=""><p class="navButton e">Photos</p></a>
-                  </div>
-          </div>
+          <div class="navbar" id="navbar"></div>
           <div class="deckSec">
             <div class="contCard">
               <img src="./publication_images/2022_bioRXiV.jpg" class="contCardImg"/>
@@ -86,3 +73,5 @@
   </body>
 
 </html>
+
+<script src="./scripts/navbar.js"></script>
