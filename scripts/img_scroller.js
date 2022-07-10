@@ -23,7 +23,7 @@ const imageAlts = [
  'The most cowardly cat in the universe',
  'The bottom table of the Flannigan UEM',
  '2018 family picture!',
- 'The top table of the Flannigan UEM',
+ 'A side view of the bottom table of the Flannigan UEM',
  'The Flannigan group at hot pot!'
 ];
 
