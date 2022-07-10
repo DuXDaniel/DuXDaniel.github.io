@@ -5,7 +5,9 @@ win_width_size = window.innerHeight;
 let expandbarElement = document.createElement("div");
 expandbarElement.className = "expandbar";
 let expandbarLoaded = 0;
-let expandButton = document.createElement("div");
+let expandButton = document.createElement("img");
+expandButton.setAttribute("src", "./scripts/expandbar_icon.png");
+expandbarElement.appendChild(expandButton);
 expandButton.className = "navButton";
 let expandbarClicked = 0;
 
@@ -39,28 +41,55 @@ let photoButton = document.createElement("div");
 photoButton.className = "navButton";
 photoButton.innerText = "Photos";
 menuElement.appendChild(photoButton);
-/*
-<a href=""><p class="navButton a">Publications</p></a>
-<a href=""><p class="navButton b">Published Code</p></a>
-<a href=""><p class="navButton c">3D Modeling Projects</p></a>
-<a href=""><p class="navButton d">Conference Proceedings</p></a>
-<a href=""><p class="navButton e">Photos</p></a>
-*/
+
+
+homeButton.addEventListener('click', () => {
+    window.location.href = "./index.html";
+});
+
+publicationButton.addEventListener('click', () => {
+    window.location.href = "./publications.html";
+});
+
+codeButton.addEventListener('click', () => {
+    window.location.href = "./published_code.html";
+});
+
+modelButton.addEventListener('click', () => {
+    window.location.href = "./3D_models.html";    
+});
+
+conferenceButton.addEventListener('click', () => {
+    window.location.href = "./conference_talks.html";    
+});
+
+photoButton.addEventListener('click', () => {
+    window.location.href = "./photo_page.html";    
+});
+
 let menuLoaded = 0;
 
 if (win_width_size >= 800)
 {
+    homeElement.style.marginRight = "auto";
     document.getElementById("navbar").appendChild(homeElement);
     homeLoaded = 1;
 
     document.getElementById("navbar").appendChild(menuElement);
     menuLoaded = 1;
+    
+    if (expandbarClicked == 1)
+    {
+        expandbarClicked = 0;
+        expandNavBar.remove();
+    }
 }
 else
 {
     document.getElementById("navbar").appendChild(expandbarElement);
     expandbarLoaded = 1;
 
+    homeElement.style.marginRight = 0;
     document.getElementById("navbar").appendChild(homeElement);
     homeLoaded = 1;
 }
@@ -93,47 +122,83 @@ window.addEventListener('resize', () => {
 
     if (win_width_size >= 800)
     {
+        homeElement.style.marginRight = "auto";
         document.getElementById("navbar").appendChild(homeElement);
         homeLoaded = 1;
 
         document.getElementById("navbar").appendChild(menuElement);
         menuLoaded = 1;
+
+        if (expandbarClicked == 1)
+        {
+            expandbarClicked = 0;
+            expandNavBar.remove();
+        }
     }
     else
     {
         document.getElementById("navbar").appendChild(expandbarElement);
         expandbarLoaded = 1;
 
+        homeElement.style.marginRight = 0;
         document.getElementById("navbar").appendChild(homeElement);
         homeLoaded = 1;
     }
 
 });
 
-expandButton.addEventListener('click', () => {
+let expandNavBar = document.createElement("div");
+expandNavBar.className = "expandNavBar";
+let pubExpandButton = document.createElement("div");
+pubExpandButton.className = "navButton";
+pubExpandButton.innerText = "Publications";
+expandNavBar.appendChild(pubExpandButton);
+let codeExpandButton = document.createElement("div");
+codeExpandButton.className = "navButton";
+codeExpandButton.innerText = "Published Code";
+expandNavBar.appendChild(codeExpandButton);
+let modelExpandButton = document.createElement("div");
+modelExpandButton.className = "navButton";
+modelExpandButton.innerText = "3D Modeling Projects";
+expandNavBar.appendChild(modelExpandButton);
+let confExpandButton = document.createElement("div");
+confExpandButton.className = "navButton";
+confExpandButton.innerText = "Conference Proceedings";
+expandNavBar.appendChild(confExpandButton);
+let photoExpandButton = document.createElement("div");
+photoExpandButton.className = "navButton";
+photoExpandButton.innerText = "Photos";
+expandNavBar.appendChild(photoExpandButton);
 
-});
-
-homeButton.addEventListener('click', () => {
-    window.location.href = "./index.html";
-});
-
-publicationButton.addEventListener('click', () => {
+pubExpandButton.addEventListener('click', () => {
     window.location.href = "./publications.html";
 });
 
-codeButton.addEventListener('click', () => {
+codeExpandButton.addEventListener('click', () => {
     window.location.href = "./published_code.html";
 });
 
-modelButton.addEventListener('click', () => {
+modelExpandButton.addEventListener('click', () => {
     window.location.href = "./3D_models.html";    
 });
 
-conferenceButton.addEventListener('click', () => {
+confExpandButton.addEventListener('click', () => {
     window.location.href = "./conference_talks.html";    
 });
 
-photoButton.addEventListener('click', () => {
+photoExpandButton.addEventListener('click', () => {
     window.location.href = "./photo_page.html";    
+});
+
+expandButton.addEventListener('click', () => {
+    if (expandbarClicked == 0)
+    {
+        expandbarClicked = 1;
+        document.getElementById("navbar").appendChild(expandNavBar);
+    }
+    else if (expandbarClicked == 1)
+    {
+        expandbarClicked = 0;
+        expandNavBar.remove();
+    }
 });

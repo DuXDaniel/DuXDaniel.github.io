@@ -2,107 +2,29 @@
 // load dirImages
 // load curCount
 const imageSources = [ // Put your image sources in this list
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg',
-'./published_code_images/LumineBruh.gif',
-'./published_code_images/AmePls.gif',
-'./published_code_images/20180704_092921.jpg'
+'./photo_pages/001.jpg',
+'./photo_pages/002.jpg',
+'./photo_pages/003.jpg',
+'./photo_pages/004.jpg',
+'./photo_pages/005.jpg',
+'./photo_pages/006.jpg',
+'./photo_pages/007.jpg',
+'./photo_pages/008.jpg',
+'./photo_pages/009.jpg',
+'./photo_pages/010.jpg'
+];
+
+const imageAlts = [
+ '2017 family picture!',
+ 'The Flannigan group UEM',
+ 'Stonearch bridge in Minneapolis',
+ 'The Flannigan group at Portland for Microscopy and Microanalysis',
+ 'Fireworks in Phoenix after Materials Research Society',
+ 'The most cowardly cat in the universe',
+ 'The bottom table of the Flannigan UEM',
+ '2018 family picture!',
+ 'The top table of the Flannigan UEM',
+ 'The Flannigan group at hot pot!'
 ];
 
 let testele = document.createElement("img");
@@ -125,8 +47,12 @@ for (let i = 0; i < numImgLoad; i++) // Change this 5 to however many images you
     divele.className = "photoCard";
     let imgele = document.createElement("img");
     imgele.className = "photoImg";
-    imgele.setAttribute("src", imageSources[i]);
-    divele.appendChild(imgele)
+    imgele.setAttribute("src", imageSources[numLoaded]);
+    let captionele = document.createElement("div");
+    captionele.className = "photoCaption"
+    captionele.innerText = imageAlts[numLoaded];
+    divele.appendChild(imgele);
+    divele.appendChild(captionele);
     document.getElementById("photoSec").appendChild(divele);
     numLoaded++;
 }
@@ -167,11 +93,20 @@ function getPhotos()
                 let imgele = document.createElement("img");
                 imgele.className = "photoImg";
                 imgele.setAttribute("src", imageSources[numLoaded]);
-                divele.appendChild(imgele)
+                let captionele = document.createElement("div");
+                captionele.className = "photoCaption"
+                captionele.innerText = imageAlts[numLoaded];
+                divele.appendChild(imgele);
+                divele.appendChild(captionele);
                 document.getElementById("photoSec").appendChild(divele);
                 numLoaded++;
             }
         }
+        
+    }
+    else
+    {
+        window.removeEventListener('scroll',() => {});
     }
     //loading.classList.remove("show");
 };
