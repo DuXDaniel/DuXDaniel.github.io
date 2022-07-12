@@ -2,14 +2,14 @@
 // load dirImages
 // load curCount
 const imageSources = [ // Put your image sources in this list
-'./photo_pages/001.jpg',
+'./photo_pages/001.JPG',
 './photo_pages/002.jpg',
 './photo_pages/003.jpg',
 './photo_pages/004.jpg',
 './photo_pages/005.jpg',
 './photo_pages/006.jpg',
 './photo_pages/007.jpg',
-'./photo_pages/008.jpg',
+'./photo_pages/008.JPG',
 './photo_pages/009.jpg',
 './photo_pages/010.jpg'
 ];

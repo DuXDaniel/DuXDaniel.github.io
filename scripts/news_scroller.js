@@ -1,11 +1,11 @@
 // could use a django backend for this goofiness, but w/e I don't generate more than 1 news article per year on average
 const imageSources = [ // Put your image sources in this list
 './index_photos/0008.png',
-'./index_photos/0007.png',
+'./index_photos/0007.PNG',
 './index_photos/0006.jpeg',
 './index_photos/0005.jpg',
-'./index_photos/0004.png',
-'./index_photos/0003.png',
+'./index_photos/0004.PNG',
+'./index_photos/0003.PNG',
 './index_photos/0002.png',
 './index_photos/0001.gif'
 ];
