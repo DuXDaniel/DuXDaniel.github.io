@@ -193,7 +193,7 @@ a:visited {
   padding: 10px 10px;
   //height: 100%;
   font-family: "Open Sans", sans-serif;
-  font-size: 2.5vh;
+  font-size: 1.5rem;
   vertical-align: middle;
   margin-left: 1vh;
   margin-right: 1vh;
@@ -221,7 +221,7 @@ a:visited {
 
 .newsTitle {
   font-family: "Open Sans", sans-serif;
-  font-size: 3vh;
+  font-size: 2rem;
   font-weight: 300;
   letter-spacing: 0.3px;
   text-align: left;
@@ -232,7 +232,7 @@ a:visited {
 
 .newsDate {
   font-family: "Open Sans", sans-serif;
-  font-size: 2vh;
+  font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.3px;
   text-align: left;
@@ -244,7 +244,7 @@ a:visited {
 .newsDetail {
   border-top: 1px solid #000000;
   font-family: "Open Sans", sans-serif;
-  font-size: 2vh;
+  font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.3px;
   text-align: left;
@@ -271,7 +271,7 @@ a:visited {
 
 .contCardTitle {
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 0.3px;
   text-align: left;
@@ -403,13 +403,13 @@ img {
   position: relative;
   bottom: 25px;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.5vh;
+  font-size: 1rem;
   vertical-align: middle;
 }
 
 .description {
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.29;
   letter-spacing: 0.1px;
