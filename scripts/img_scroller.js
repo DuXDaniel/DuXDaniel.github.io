@@ -27,7 +27,7 @@ const imageAlts = [
  'The Flannigan group at hot pot!'
 ];
 
-let testele = document.createElement("img");
+var testele = document.createElement("img");
 testele.className = "photoImg";
 document.getElementById("photoSec").appendChild(testele);
 numLoaded = 0;
@@ -41,14 +41,14 @@ numImgPerRow = Math.floor(win_width_size / img_width_size);
 numRows = Math.ceil(win_height_size / img_height_size);
 numImgLoad = numRows * numImgPerRow;
 
-for (let i = 0; i < numImgLoad; i++) // Change this 5 to however many images you have (or use for ... in) 
+for (var i = 0; i < numImgLoad; i++) // Change this 5 to however many images you have (or use for ... in) 
 { 
-    let divele = document.createElement("div");
+    var divele = document.createElement("div");
     divele.className = "photoCard";
-    let imgele = document.createElement("img");
+    var imgele = document.createElement("img");
     imgele.className = "photoImg";
     imgele.setAttribute("src", imageSources[numLoaded]);
-    let captionele = document.createElement("div");
+    var captionele = document.createElement("div");
     captionele.className = "photoCaption"
     captionele.innerText = imageAlts[numLoaded];
     divele.appendChild(imgele);
@@ -73,7 +73,7 @@ function getPhotos()
     if (numLoaded <= imageSources.length-1)
     {
         // reload img sizes
-        let testele = document.createElement("img");
+        var testele = document.createElement("img");
         testele.className = "photoImg";
         document.getElementById("photoSec").appendChild(testele);
         win_height_size = window.innerHeight;
@@ -84,16 +84,16 @@ function getPhotos()
 
         numImgPerRow = Math.floor(win_width_size / img_width_size);
 
-        for (let i = 0; i < numImgPerRow; i++) // Change this 5 to however many images you have (or use for ... in) 
+        for (var i = 0; i < numImgPerRow; i++) // Change this 5 to however many images you have (or use for ... in) 
         { 
             if (numLoaded <= imageSources.length-1)
             {
-                let divele = document.createElement("div");
+                var divele = document.createElement("div");
                 divele.className = "photoCard";
-                let imgele = document.createElement("img");
+                var imgele = document.createElement("img");
                 imgele.className = "photoImg";
                 imgele.setAttribute("src", imageSources[numLoaded]);
-                let captionele = document.createElement("div");
+                var captionele = document.createElement("div");
                 captionele.className = "photoCaption"
                 captionele.innerText = imageAlts[numLoaded];
                 divele.appendChild(imgele);

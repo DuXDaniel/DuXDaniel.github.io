@@ -65,9 +65,9 @@ const newsExtraLinks = [
 ''
 ];
 
-let testele = document.createElement("div");
+var testele = document.createElement("div");
 testele.className = "newsCard";
-let testimg = document.createElement("img");
+var testimg = document.createElement("img");
 testimg.className = "newsImg";
 testimg.setAttribute("src", imageSources[0]);
 testele.appendChild(testimg);
@@ -82,18 +82,18 @@ testele.remove();
 
 numRows = Math.ceil(win_height_size / img_height_size);
 
-for (let i = 0; i < numRows; i++) // Change this 5 to however many images you have (or use for ... in) 
+for (var i = 0; i < numRows; i++) // Change this 5 to however many images you have (or use for ... in) 
 { 
-    let divele = document.createElement("div");
+    var divele = document.createElement("div");
     divele.className = "newsCard";
-    let imgele = document.createElement("img");
+    var imgele = document.createElement("img");
     imgele.className = "newsImg";
     imgele.setAttribute("src", imageSources[numLoaded]);
-    let titleele = document.createElement("div");
+    var titleele = document.createElement("div");
     titleele.className = "newsTitle";
     if (newsURLs[numLoaded] != '')
     {
-        let titleURL = document.createElement("a");
+        var titleURL = document.createElement("a");
         titleURL.className = "newsURLs";
         titleURL.setAttribute("href",newsURLs[numLoaded]);
         titleURL.innerText = newsTitles[numLoaded];
@@ -103,14 +103,14 @@ for (let i = 0; i < numRows; i++) // Change this 5 to however many images you ha
     {
         titleele.innerText = newsTitles[numLoaded];
     }
-    let dateele = document.createElement("div");
+    var dateele = document.createElement("div");
     dateele.className = "newsDate";
     dateele.innerText = newsDate[numLoaded];
-    let detailele = document.createElement("div");
+    var detailele = document.createElement("div");
     detailele.className = "newsDetail";
     if (newsExtraLinks[numLoaded] != '')
     {
-        let detailurl = document.createElement("a");
+        var detailurl = document.createElement("a");
         detailurl.className = "newsURLs";
         detailurl.setAttribute("href",newsExtraLinks[numLoaded]);
         detailurl.innerText = newsDetail[numLoaded];
@@ -144,9 +144,9 @@ function getPhotos()
     if (numLoaded <= imageSources.length-1)
     {
         // reload img sizes
-        let testele = document.createElement("div");
+        var testele = document.createElement("div");
         testele.className = "newsCard";
-        let testimg = document.createElement("img");
+        var testimg = document.createElement("img");
         testimg.className = "newsImg";
         testimg.setAttribute("src", imageSources[0]);
         testele.appendChild(testimg);
@@ -160,16 +160,16 @@ function getPhotos()
         
         if (numLoaded <= imageSources.length-1)
         {
-            let divele = document.createElement("div");
+            var divele = document.createElement("div");
             divele.className = "newsCard";
-            let imgele = document.createElement("img");
+            var imgele = document.createElement("img");
             imgele.className = "newsImg";
             imgele.setAttribute("src", imageSources[numLoaded]);
-            let titleele = document.createElement("div");
+            var titleele = document.createElement("div");
             titleele.className = "newsTitle";
             if (newsURLs[numLoaded] != '')
             {
-                let titleURL = document.createElement("a");
+                var titleURL = document.createElement("a");
                 titleURL.className = "newsURLs";
                 titleURL.setAttribute("href",newsURLs[numLoaded]);
                 titleURL.innerText = newsTitles[numLoaded];
@@ -179,14 +179,14 @@ function getPhotos()
             {
                 titleele.innerText = newsTitles[numLoaded];
             }
-            let dateele = document.createElement("div");
+            var dateele = document.createElement("div");
             dateele.className = "newsDate";
             dateele.innerText = newsDate[numLoaded];
-            let detailele = document.createElement("div");
+            var detailele = document.createElement("div");
             detailele.className = "newsDetail";
             if (newsExtraLinks[numLoaded] != '')
             {
-                let detailurl = document.createElement("a");
+                var detailurl = document.createElement("a");
                 detailurl.className = "newsURLs";
                 detailurl.setAttribute("href",newsExtraLinks[numLoaded]);
                 detailurl.innerText = newsDetail[numLoaded];

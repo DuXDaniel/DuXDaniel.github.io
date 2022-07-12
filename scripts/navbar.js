@@ -2,42 +2,42 @@
 win_height_size = window.innerWidth;
 win_width_size = window.innerHeight;
 
-let expandbarElement = document.createElement("div");
+var expandbarElement = document.createElement("div");
 expandbarElement.className = "expandbar";
-let expandbarLoaded = 0;
-let expandButton = document.createElement("img");
+var expandbarLoaded = 0;
+var expandButton = document.createElement("img");
 expandButton.setAttribute("src", "./scripts/expandbar_icon.png");
 expandbarElement.appendChild(expandButton);
 expandButton.className = "navButton";
-let expandbarClicked = 0;
+var expandbarClicked = 0;
 
-let homeElement = document.createElement("div");
+var homeElement = document.createElement("div");
 homeElement.className = "homebar";
-let homeLoaded = 0;
-let homeButton = document.createElement("div");
+var homeLoaded = 0;
+var homeButton = document.createElement("div");
 homeButton.className = "navButton";
 homeButton.innerText = "News";
 homeElement.appendChild(homeButton);
 
-let menuElement = document.createElement("div");
+var menuElement = document.createElement("div");
 menuElement.className = "menubar";
-let publicationButton = document.createElement("div");
+var publicationButton = document.createElement("div");
 publicationButton.className = "navButton";
 publicationButton.innerText = "Publications";
 menuElement.appendChild(publicationButton);
-let codeButton = document.createElement("div");
+var codeButton = document.createElement("div");
 codeButton.className = "navButton";
 codeButton.innerText = "Published Code";
 menuElement.appendChild(codeButton);
-let modelButton = document.createElement("div");
+var modelButton = document.createElement("div");
 modelButton.className = "navButton";
 modelButton.innerText = "3D Modeling Projects";
 menuElement.appendChild(modelButton);
-let conferenceButton = document.createElement("div");
+var conferenceButton = document.createElement("div");
 conferenceButton.className = "navButton";
 conferenceButton.innerText = "Conference Proceedings";
 menuElement.appendChild(conferenceButton);
-let photoButton = document.createElement("div");
+var photoButton = document.createElement("div");
 photoButton.className = "navButton";
 photoButton.innerText = "Photos";
 menuElement.appendChild(photoButton);
@@ -67,7 +67,7 @@ photoButton.addEventListener('click', () => {
     window.location.href = "./photo_page.html";    
 });
 
-let menuLoaded = 0;
+var menuLoaded = 0;
 
 if (win_width_size >= 800)
 {
@@ -147,25 +147,25 @@ window.addEventListener('resize', () => {
 
 });
 
-let expandNavBar = document.createElement("div");
+var expandNavBar = document.createElement("div");
 expandNavBar.className = "expandNavBar";
-let pubExpandButton = document.createElement("div");
+var pubExpandButton = document.createElement("div");
 pubExpandButton.className = "navButton";
 pubExpandButton.innerText = "Publications";
 expandNavBar.appendChild(pubExpandButton);
-let codeExpandButton = document.createElement("div");
+var codeExpandButton = document.createElement("div");
 codeExpandButton.className = "navButton";
 codeExpandButton.innerText = "Published Code";
 expandNavBar.appendChild(codeExpandButton);
-let modelExpandButton = document.createElement("div");
+var modelExpandButton = document.createElement("div");
 modelExpandButton.className = "navButton";
 modelExpandButton.innerText = "3D Modeling Projects";
 expandNavBar.appendChild(modelExpandButton);
-let confExpandButton = document.createElement("div");
+var confExpandButton = document.createElement("div");
 confExpandButton.className = "navButton";
 confExpandButton.innerText = "Conference Proceedings";
 expandNavBar.appendChild(confExpandButton);
-let photoExpandButton = document.createElement("div");
+var photoExpandButton = document.createElement("div");
 photoExpandButton.className = "navButton";
 photoExpandButton.innerText = "Photos";
 expandNavBar.appendChild(photoExpandButton);
