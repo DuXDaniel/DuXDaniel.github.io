@@ -73,7 +73,17 @@ header {
 
 }
 
-.headerText a
+a:link {
+  text-decoration: none;
+  color: rgba(0, 111, 17, 1)
+}
+
+a:visited {
+  text-decoration: none;
+  color: rgba(0, 111, 17, 1)
+}
+
+.headerText a:link
 {
   font-family: "Open Sans", sans-serif;
   color: rgba(255,255,255,1);
@@ -218,16 +228,6 @@ header {
   color: #000000;
   padding: 0px 0px 5px 5px;
   margin:0px;
-}
-
-a:link {
-  text-decoration: none;
-  color: rgba(0, 111, 17, 1)
-}
-
-a:visited {
-  text-decoration: none;
-  color: rgba(0, 111, 17, 1)
 }
 
 .newsDate {
