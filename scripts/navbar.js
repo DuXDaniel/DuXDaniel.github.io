@@ -1,6 +1,8 @@
 // const imageSources = [];
-win_height_size = window.innerWidth;
-win_width_size = window.innerHeight;
+win_height_size = window.innerHeight;
+win_width_size = window.innerWidth;
+
+var barSize = 1000;
 
 var expandbarElement = document.createElement("div");
 expandbarElement.className = "expandbar";
@@ -69,7 +71,7 @@ photoButton.addEventListener('click', () => {
 
 var menuLoaded = 0;
 
-if (win_width_size >= 800)
+if (win_width_size >= barSize)
 {
     homeElement.style.marginRight = "auto";
     document.getElementById("navbar").appendChild(homeElement);
@@ -120,7 +122,7 @@ window.addEventListener('resize', () => {
         menuLoaded = 0;
     }
 
-    if (win_width_size >= 800)
+    if (win_width_size >= barSize)
     {
         homeElement.style.marginRight = "auto";
         document.getElementById("navbar").appendChild(homeElement);

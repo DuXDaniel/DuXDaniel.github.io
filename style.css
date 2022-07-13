@@ -13,8 +13,7 @@ body {
   display: block;
   box-sizing: border-box;
   background-color: rgba(255,255,255,0.75);
-  //box-shadow: 0 0px 5px 5px rgba(0, 0, 0, 0.5);
-  min-width: 480px;
+  min-width: 100%;
   max-width: 100%;
   margin: auto;
 }
@@ -29,7 +28,7 @@ header {
   position: relative;
   top: 0;
   left: 0;
-  height: 300px;
+  height: 31.25vh;
 }
 
 .headerTitle {
@@ -41,9 +40,9 @@ header {
   justify-content: center;
   text-align: center;
   position: absolute;
-  height: 300px;
+  height: 31.25vh;
   width: 100%;
-  top: -50px;
+  top: -5vh;
   left: 0;
   font-size: 2.5rem;
   margin-bottom: 0;
@@ -62,8 +61,8 @@ header {
   text-align: center;
   position: absolute;
   width: 100%;
-  height: 300px;
-  top: 15px;
+  height: 31.25vh;
+  top: 2vh;
   left: 0;
   font-size: 1rem;
   margin-bottom: 0;
@@ -113,28 +112,18 @@ a:visited {
 }
 
 .mainContent {
-
   justify-items: center;
   justify-content: center;
   align-items: center
   align-content: center;
-  width: clamp(480px, 100%, 7680);
-
+  width: 100%;
 }
-
-/*
-.vertspacer {
-  height: 6px;
-}
-*/
 
 .navbar {
-
   display: flex;
   background-color: rgb(0, 0, 0, 0.75);
-  height: 100px;
+  height: 10vh;
   // border-style: double;
-
 }
 
 .expandbar {
@@ -156,17 +145,15 @@ a:visited {
   align-items: center;
   align-content: center;
   background-color: rgb(0, 0, 0, 0.90);
-  height: 100px;
+  height: 25vh;
   // border-style: double;
   position:absolute;
   width: 97%;
-  height: 200px;
-  top: 107px;
+  top: 7.25vh;
   left: 1.5%;
 }
 
 .expandButton:hover{
-  // box-shadow: 0 5px 5px -3px rgba(255, 255, 255, 0.5);
   cursor:pointer;
 }
 
@@ -186,22 +173,18 @@ a:visited {
 }
 
 .navButton {
-
   display: flex;
   text-align: center;
   color: rgba(255,255,255,1);
-  padding: 10px 10px;
-  //height: 100%;
+  padding: 1vh 1vh;
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
   vertical-align: middle;
   margin-left: 1vh;
   margin-right: 1vh;
-
 }
 
 .navButton:hover {
-  // box-shadow: 0 5px 5px -3px rgba(255, 255, 255, 0.5);
   cursor:pointer;
 }
 
@@ -209,7 +192,6 @@ a:visited {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
-  //gap: 5px;
   margin-top: 1vh;
   justify-items: center;
   justify-content: center;
@@ -219,26 +201,46 @@ a:visited {
   grid-row-gap: 1vh;
 }
 
+.newsCard {
+  background-color: rgba(255,255,255,0.75);
+  display: grid;
+  grid-template-rows: 2fr 1fr 2fr;
+  grid-template-columns: 1fr 3fr; 
+  box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.5);
+  width: 99%;
+  height: 30vh;
+  border-style: solid;
+}
+
+.newsImg {
+  grid-row: 1 / span 3;
+  grid-column: 1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-right: 1px solid #000000;
+}
+
 .newsTitle {
   font-family: "Open Sans", sans-serif;
   font-size: 2rem;
   font-weight: 300;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.1vh;
   text-align: left;
   color: #000000;
-  padding: 0px 0px 5px 5px;
-  margin:0px;
+  padding: 0vh 0vh 1vh 1vh;
+  margin: 0vh;
 }
 
 .newsDate {
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.1vh;
   text-align: left;
   color: #000000;
-  padding: 0px 0px 5px 5px;
-  margin:0px;
+  padding: 0vh 0vh 1vh 1vh;
+  margin: 0vh;
 }
 
 .newsDetail {
@@ -246,26 +248,25 @@ a:visited {
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.1vh;
   text-align: left;
   color: #000000;
-  padding: 0px 0px 5px 5px;
-  margin:0px;
+  padding: 0vh 0vh 1vh 1vh;
+  margin: 0vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .deckSec {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  // grid-template-rows: minmax(300px, 500px) minmax(300px, 500px) minmax(300px, 500px);
-  gap: 10px;
-  margin-top: 20px;
+  gap: 3vh;
+  margin-top: 2vh;
   justify-items: center;
   justify-content: center;
   align-items: stretch;
   align-content: center;
-  // grid-auto-columns: minmax(100px, 300px);
-  grid-auto-rows: 300px;
-  //grid-row-gap: 2vh;
+  grid-auto-rows: 31.375vh;
   width: 100%;
 }
 
@@ -273,11 +274,11 @@ a:visited {
   font-family: "Open Sans", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.1vh;
   text-align: left;
   color: #000000;
-  padding: 0px 0px 5px 5px;
-  margin:0px;
+  padding: 0vh 0vh 1vh 1vh;
+  margin: 0vh;
 }
 
 img {
@@ -303,17 +304,8 @@ img {
   box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.5);
   width: 99%;
   height: 100%;
-  border-style: solid;
-}
-
-.newsCard {
-  background-color: rgba(255,255,255,0.75);
-  display: grid;
-  grid-template-rows: 2fr 1fr 2fr;
-  grid-template-columns: 1fr 3fr; 
-  box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.5);
-  width: 99%;
-  height: 250px;
+  max-width: 100%;
+  max-height: 100%;
   border-style: solid;
 }
 
@@ -322,6 +314,17 @@ img {
   grid-column: 1;
   height: 100%;
   width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-right: 1px solid #000000;
+}
+
+.slideshow-container {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
   object-fit: cover;
 }
 
@@ -329,17 +332,25 @@ img {
   grid-row: 1 / span 2;
   grid-column: 2;
   width: 100%;
+  max-width: 100%;
   height: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 .embedSlide {
   width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
   object-fit: cover;
 }
 
 .slideImg {
   width: 100%;
   max-width: 100%;
+  height: 100%;
+  max-height: 100%;
   object-fit: cover;
 }
 
@@ -350,18 +361,9 @@ img {
 }
 
 .slideCaption {
-  margin-top:-2px;
   background-color: rgba(0,0,0,0.75);
   color: white;
   font-family: "Open Sans", sans-serif;
-}
-
-.newsImg {
-  grid-row: 1 / span 3;
-  grid-column: 1;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
 }
 
 .photoSec {
@@ -371,11 +373,9 @@ img {
   justify-content: center;
   align-items: stretch;
   align-content: center;
-  // grid-auto-columns: minmax(100px, 300px);
-  //grid-row-gap: 2vh;
-  grid-gap: 10px;
+  grid-gap: 2vh;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 500px;
+  grid-auto-rows: 60vh;
   grid-auto-flow: dense;
 }
 
@@ -399,9 +399,9 @@ img {
   display: flex;
   background-color: rgb(0, 0, 0, 0.90);
   color: white;
-  height: 25px;
+  height: 2.5vh;
   position: relative;
-  bottom: 25px;
+  bottom: 2.5vh;
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   vertical-align: middle;
@@ -412,10 +412,10 @@ img {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.29;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.1vh;
   text-align: justify;
   color: #000000;
-  padding: 5px 5px 5px 5px;
+  padding: 0.5vh 0.5vh 0.5vh 0.5vh;
   border-top: 1px solid #000000;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -425,7 +425,7 @@ footer {
   // background-color: rgba(24,95,69,1);
   margin-left: 1.5%;
   text-align: left;
-  min-width: 500px;
+  min-width: 50vh;
   margin-top: 2%;
   padding-bottom: 0.1%;
   font-family: "Open Sans", sans-serif;
@@ -435,19 +435,20 @@ footer {
   .deckSec {
     display: grid;
     grid-template-columns: repeat(2,1fr); // limit in smaller screens
-    // grid-template-rows: minmax(300px, 500px) minmax(300px, 500px) minmax(300px, 500px);
-    gap: 10px;
+    gap: 1vh;
     justify-items: center;
     justify-content: center;
     align-items: stretch;
     align-content: center;
-    // grid-auto-columns: minmax(100px, 300px);
-    grid-auto-rows: minmax(100px, 300px);
-    //grid-row-gap: 2vh;
+    grid-auto-rows: 31.375vh;
   }
 
   .photoSec {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar {
+    height: 15vh;
   }
 }
 
@@ -455,18 +456,43 @@ footer {
   .deckSec {
     display: grid;
     grid-template-columns: repeat(1,1fr); // limit in smaller screens
-    // grid-template-rows: minmax(300px, 500px) minmax(300px, 500px) minmax(300px, 500px);
-    gap: 10px;
+    gap: 1vh;
     justify-items: center;
     justify-content: center;
     align-items: stretch;
     align-content: center;
-    // grid-auto-columns: minmax(100px, 300px);
-    grid-auto-rows: minmax(100px, 300px);
-    //grid-row-gap: 2vh;
+    grid-auto-rows: 31.375vh;
   }
 
   .photoSec {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .navbar {
+    height: 15vh;
+  }
+
+  .newsTitle {
+    font-size: 1.25rem;
+  }
+
+  .newsDate {
+    font-size: 1rem;
+  }
+
+  .newsDetail {
+    font-size: 1rem;
+  }
+  
+  .navButton {
+    display: flex;
+    text-align: center;
+    color: rgba(255,255,255,1);
+    padding: 1vh 1vh;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-left: 1vh;
+    margin-right: 1vh;
   }
 }
