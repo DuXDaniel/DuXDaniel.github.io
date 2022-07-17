@@ -448,7 +448,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 999px) and (min-width: 500px) {
   .deckSec {
     display: grid;
     grid-template-columns: repeat(1,1fr); // limit in smaller screens
@@ -490,5 +490,77 @@ footer {
     vertical-align: middle;
     margin-left: 1vh;
     margin-right: 1vh;
+  }
+}
+
+@media only screen and (max-width: 499px){
+  header {
+    height: 15vh;
+  }
+  
+  .headerTitle {
+    height: 15vh;
+    top: -5vh;
+    font-size: 1.5rem;
+  }
+  
+  .headerText {
+    height: 15vh;
+    top: 1.5vh;
+    font-size: 0.75rem;
+  }
+  
+  .deckSec {
+    display: grid;
+    grid-template-columns: repeat(1,1fr); // limit in smaller screens
+    gap: 1vh;
+    justify-items: center;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    grid-auto-rows: 31.375vh;
+  }
+
+  .photoSec {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .navbar {
+    height: 5vh;
+  }
+
+  .expandNavBar {
+    height: 15vh;
+    top: 1.25vh;
+    width: 95%;
+    left: 2.5%;
+  }
+
+  .newsTitle {
+    font-size: 1rem;
+  }
+
+  .newsDate {
+    font-size: 0.75rem;
+  }
+
+  .newsDetail {
+    font-size: 0.75rem;
+  }
+  
+  .navButton {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.75rem;
+  }
+
+  .contCardTitle {
+    font-size: 1rem;
+  }
+
+  .deckSec {
+    grid-auto-rows: 25vh;
   }
 }
