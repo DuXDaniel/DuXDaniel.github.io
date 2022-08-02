@@ -21,10 +21,11 @@ header {
   background-color: rgba(0,0,0,0.75);
   text-align: left;
   min-width: 100%;
-  position: relative;
+  position: sticky;
   top: 0;
   left: 0;
-  height: 31.25vh;
+  height: 20vh;
+  z-index: 99;
 }
 
 .headerTitle {
@@ -36,7 +37,7 @@ header {
   justify-content: center;
   text-align: center;
   position: absolute;
-  height: 31.25vh;
+  height: 20vh;
   width: 100%;
   top: -5vh;
   left: 0;
@@ -57,7 +58,7 @@ header {
   text-align: center;
   position: absolute;
   width: 100%;
-  height: 31.25vh;
+  height: 20vh;
   top: 2vh;
   left: 0;
   font-size: 1rem;
@@ -113,12 +114,16 @@ a:visited {
   align-items: center
   align-content: center;
   width: 100%;
+  padding-top: 7vh;
 }
 
 .navbar {
   display: flex;
   background-color: rgb(0, 0, 0, 0.75);
-  height: 10vh;
+  height: 7vh;
+  min-width: 99%;
+  // position: fixed;
+  // top: 20vh;
   // border-style: double;
 }
 
@@ -141,11 +146,11 @@ a:visited {
   align-items: center;
   align-content: center;
   background-color: rgb(0, 0, 0, 0.90);
-  height: 25vh;
+  height: 15vh;
   // border-style: double;
   position:absolute;
   width: 97%;
-  top: 7.25vh;
+  top: 5vh;
   left: 1.5%;
 }
 
@@ -441,7 +446,7 @@ footer {
   }
 
   .navbar {
-    height: 15vh;
+    height: 10vh;
   }
 }
 
@@ -460,9 +465,13 @@ footer {
   .photoSec {
     grid-template-columns: repeat(1, 1fr);
   }
+  
+  .mainContent {
+    padding-top: 10vh;
+  }
 
   .navbar {
-    height: 15vh;
+    height: 10vh;
   }
 
   .newsTitle {
@@ -520,6 +529,10 @@ footer {
 
   .photoSec {
     grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .mainContent {
+    padding-top: 5vh;
   }
 
   .navbar {
