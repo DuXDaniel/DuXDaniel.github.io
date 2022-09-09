@@ -124,7 +124,10 @@ for (var i = 0; i < numRows; i++) // Change this 5 to however many images you ha
     divele.appendChild(titleele);
     divele.appendChild(dateele);
     divele.appendChild(detailele);
+    var divlineele = document.createElement("div");
+    divlineele.className = "divline";
     document.getElementById("newsSec").appendChild(divele);
+    document.getElementById("newsSec").appendChild(divlineele);
     numLoaded++;
 }
 
@@ -200,7 +203,10 @@ function getPhotos()
             divele.appendChild(titleele);
             divele.appendChild(dateele);
             divele.appendChild(detailele);
+            var divlineele = document.createElement("div");
+            divlineele.className = "divline";
             document.getElementById("newsSec").appendChild(divele);
+            document.getElementById("newsSec").appendChild(divlineele);
             numLoaded++;
         }
     }
