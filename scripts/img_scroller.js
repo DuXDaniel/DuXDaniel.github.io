@@ -31,6 +31,7 @@ var testele = document.createElement("img");
 testele.className = "photoImg";
 document.getElementById("photoSec").appendChild(testele);
 numLoaded = 0;
+numImg = imageSources.length;
 win_height_size = window.innerHeight;
 win_width_size = window.innerWidth;
 img_height_size = testele.clientHeight;
@@ -41,7 +42,12 @@ numImgPerRow = Math.floor(win_width_size / img_width_size);
 numRows = Math.ceil(win_height_size / img_height_size);
 numImgLoad = numRows * numImgPerRow;
 
-for (var i = 0; i < numImgLoad; i++) // Change this 5 to however many images you have (or use for ... in) 
+if (numImgLoad > numImg)
+{
+    numImgLoad = numImg
+}
+
+for (var i = 0; i < numImgLoad; i++) // Change this to however many images you have (or use for ... in) 
 { 
     var divele = document.createElement("div");
     divele.className = "photoCard";
