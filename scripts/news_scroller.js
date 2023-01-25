@@ -1,5 +1,6 @@
 // could use a django backend for this goofiness, but w/e I don't generate more than 1 news article per year on average
 const imageSources = [ // Put your image sources in this list
+'./index_photos/0009.png',
 './index_photos/0008.png',
 './index_photos/0007.png',
 './index_photos/0006.jpeg',
@@ -11,6 +12,7 @@ const imageSources = [ // Put your image sources in this list
 ];
 
 const newsTitles = [
+'Cell Reports Methods Publication: \"Design of an ultrafast pulsed ponderomotive phase plate for cryo-electron tomography\"',
 'Sigma Xi Award: Grant in Aid of Research for the proposal of "Controlled Polarization of Pump Photons in Ultrafast Electron Microscopy Experiments',
 'Ultramicroscopy Publication: \"UEMtomaton: A Source-Available Platform to Aid in Start-up of Ultrafast Electron Microscopy Labs\"',
 'Featured Article in SciLight',
@@ -22,6 +24,7 @@ const newsTitles = [
 ];
 
 const newsURLs = [
+'https://www.sciencedirect.com/science/article/pii/S2667237522002922',
 'https://www.sigmaxi.org/programs/grants-in-aid-of-research/grant-recipients',
 'https://www.sciencedirect.com/science/article/pii/S0304399121000309',
 'https://aip.scitation.org/doi/full/10.1063/10.0001176',
@@ -33,6 +36,7 @@ const newsURLs = [
 ];
 
 const newsDate = [
+'January 23rd, 2022',
 'June, 2021.',
 'April, 2021.',
 'April 17th, 2020.',
@@ -46,6 +50,7 @@ const newsDate = [
 const newsDetail = [
 '',
 '',
+'',
 'Featured article in ACA SciLight for the publication of \"Imaging phonon dynamics with ultrafast electron microscopy: Kinematical and dynamical simulations\" in Structural Dynamics.',
 '',
 'Awarded for exemplary performance as a TA in MATS 3801 at University of Minnesota, Twin Cities.',
@@ -55,6 +60,7 @@ const newsDetail = [
 ];
 
 const newsExtraLinks = [
+'',
 '',
 '',
 'https://aca.scitation.org/doi/10.1063/1.5144682',
