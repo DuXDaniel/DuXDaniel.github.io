@@ -2,7 +2,7 @@
 win_height_size = window.innerHeight;
 win_width_size = window.innerWidth;
 
-var barSize = 1000;
+var barSize = 750;
 
 var expandbarElement = document.createElement("div");
 expandbarElement.className = "expandbar";

@@ -8,7 +8,7 @@ headerele.appendChild(backimg01);
 
 var backimg02 = document.createElement("img");
 backimg02.className = "headerImg";
-backimg02.setAttribute("src", "./background/header/header_img.png");
+backimg02.setAttribute("src", "./background/header/header_img_4.png");
 backimg01.style.position = "absolute";
 headerele.appendChild(backimg02);
 
@@ -19,7 +19,7 @@ headerele.appendChild(titleele);
 
 var textele = document.createElement("p");
 textele.className = "headerText";
-textele.innerHTML = '<a href="mailto:dxd2001@columbia.edu">dxd2001@columbia.edu</a>&nbsp|&nbsp<a href="https://github.com/DuXDaniel">GitHub</a>&nbsp|&nbsp<a href="https://www.linkedin.com/in/dudanielx/">LinkedIn</a>&nbsp|&nbsp<a href="https://twitter.com/DuXDaniel">Twitter</a>';
+textele.innerHTML = '<a href="mailto:du.daniel.x@gmail.com">du.daniel.x@gmail.com</a>&nbsp|&nbsp<a href="https://github.com/DuXDaniel">GitHub</a>&nbsp|&nbsp<a href="https://scholar.google.com/citations?user=iQGJ3fIAAAAJ&hl=en">Google Scholars</a>';
 headerele.appendChild(textele);
 
 var navele = document.createElement("div");
