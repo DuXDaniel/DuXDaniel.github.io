@@ -1,74 +1,98 @@
 // could use a django backend for this goofiness, but w/e I don't generate more than 1 news article per year on average
 const imageSources = [ // Put your image sources in this list
-'./index_photos/0009.png',
-'./index_photos/0008.png',
-'./index_photos/0007.png',
-'./index_photos/0006.jpeg',
-'./index_photos/0005.jpg',
-'./index_photos/0004.png',
-'./index_photos/0003.png',
-'./index_photos/0002.png',
-'./index_photos/0001.gif'
+    './publication_images/2025_bioRXiv_01.jpg',
+    './conference_images/2025_SMART.jpg',
+    './publication_images/2024_bioRXiv.jpg',
+    './publication_images/2023_J_Struct_Bio.jpg',
+    './index_photos/0009.png',
+    './index_photos/0008.png',
+    './index_photos/0007.png',
+    './index_photos/0006.jpeg',
+    './index_photos/0005.jpg',
+    './index_photos/0004.png',
+    './index_photos/0003.png',
+    './index_photos/0002.png',
+    './index_photos/0001.gif'
 ];
 
 const newsTitles = [
-'Cell Reports Methods Publication: \"Design of an ultrafast pulsed ponderomotive phase plate for cryo-electron tomography\"',
-'Sigma Xi Award: Grant in Aid of Research for the proposal of "Controlled Polarization of Pump Photons in Ultrafast Electron Microscopy Experiments',
-'Ultramicroscopy Publication: \"UEMtomaton: A Source-Available Platform to Aid in Start-up of Ultrafast Electron Microscopy Labs\"',
-'Featured Article in SciLight',
-'Structural Dynamics Publication: \"Imaging phonon dynamics with ultrafast electron microscopy: Kinematical and dynamical simulations\"',
-'Outstanding TA Awardee',
-'M&M 2018 Meeting Awardee',
-'Physical Review Materials Publication: \"Picosecond phase-velocity dispersion of hypersonic phonons imaged with ultrafast electron microscopy\"',
-'Nano Letters Publication: \"Mechanisms of Local Stress Sensing in Multifunctional Polymer Films Using Fluorescent Tetrapod Nanocrystals\"'
+    'Preprint: \"Pulsed-laser lensing for phase modulation in electron microscopy\"',
+    'Conference Talk: Pulsed Laser Control of Fast Electrons',
+    'Preprint: \"Development of an ultrafast pulsed ponderomotive phase plate for cryo-electron tomography\"',
+    'Journal of Structural Biology Publication: \"Four-dimensional microED of conformational dynamics in protein microcrystals on the femto-to-microsecond timescales\"',
+    'Cell Reports Methods Publication: \"Design of an ultrafast pulsed ponderomotive phase plate for cryo-electron tomography\"',
+    'Sigma Xi Award: Grant in Aid of Research for the proposal of "Controlled Polarization of Pump Photons in Ultrafast Electron Microscopy Experiments',
+    'Ultramicroscopy Publication: \"UEMtomaton: A Source-Available Platform to Aid in Start-up of Ultrafast Electron Microscopy Labs\"',
+    'Featured Article in SciLight',
+    'Structural Dynamics Publication: \"Imaging phonon dynamics with ultrafast electron microscopy: Kinematical and dynamical simulations\"',
+    'Outstanding TA Awardee',
+    'M&M 2018 Meeting Awardee',
+    'Physical Review Materials Publication: \"Picosecond phase-velocity dispersion of hypersonic phonons imaged with ultrafast electron microscopy\"',
+    'Nano Letters Publication: \"Mechanisms of Local Stress Sensing in Multifunctional Polymer Films Using Fluorescent Tetrapod Nanocrystals\"'
 ];
 
 const newsURLs = [
-'https://www.sciencedirect.com/science/article/pii/S2667237522002922',
-'https://www.sigmaxi.org/programs/grants-in-aid-of-research/grant-recipients',
-'https://www.sciencedirect.com/science/article/pii/S0304399121000309',
-'https://aip.scitation.org/doi/full/10.1063/10.0001176',
-'https://aca.scitation.org/doi/10.1063/1.5144682',
-'',
-'https://www.microscopy.org/MandM/2018/meetings/2018_meeting_awardees.cfm',
-'https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.1.073801',
-'https://pubs.acs.org/doi/full/10.1021/acs.nanolett.6b01907'
+    'https://www.biorxiv.org/content/10.1101/2025.06.12.659428v1.abstract',
+    '',
+    'https://www.biorxiv.org/content/10.1101/2024.03.20.585981v1.abstract',
+    'https://www.sciencedirect.com/science/article/pii/S1047847723000047',
+    'https://www.sciencedirect.com/science/article/pii/S2667237522002922',
+    'https://www.sigmaxi.org/programs/grants-in-aid-of-research/grant-recipients',
+    'https://www.sciencedirect.com/science/article/pii/S0304399121000309',
+    'https://aip.scitation.org/doi/full/10.1063/10.0001176',
+    'https://aca.scitation.org/doi/10.1063/1.5144682',
+    '',
+    'https://www.microscopy.org/MandM/2018/meetings/2018_meeting_awardees.cfm',
+    'https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.1.073801',
+    'https://pubs.acs.org/doi/full/10.1021/acs.nanolett.6b01907'
 ];
 
 const newsDate = [
-'January 23rd, 2022',
-'June, 2021.',
-'April, 2021.',
-'April 17th, 2020.',
-'April 17th, 2020.',
-'June 11th, 2018.',
-'April 4th, 2018.',
-'December 5th, 2017.',
-'July 13th, 2016.'
+    'June 17th, 2025',
+    'April, 2025',
+    'March 25th, 2024',
+    'March, 2023',
+    'January 23rd, 2022',
+    'June, 2021',
+    'April, 2021',
+    'April 17th, 2020',
+    'April 17th, 2020',
+    'June 11th, 2018',
+    'April 4th, 2018',
+    'December 5th, 2017',
+    'July 13th, 2016'
 ];
 
 const newsDetail = [
-'',
-'',
-'',
-'Featured article in ACA SciLight for the publication of \"Imaging phonon dynamics with ultrafast electron microscopy: Kinematical and dynamical simulations\" in Structural Dynamics.',
-'',
-'Awarded for exemplary performance as a TA in MATS 3801 at University of Minnesota, Twin Cities.',
-'M&M Student Scholar Awardee for the conference paper \"Directed Hypersonic Strain Waves Imaged with Ultrafast Electron Microscopy\".',
-'',
-''
+    '',
+    'Smart Electron Consortium 2025',
+    '',
+    '',
+    '',
+    '',
+    '',
+    'Featured article in ACA SciLight for the publication of \"Imaging phonon dynamics with ultrafast electron microscopy: Kinematical and dynamical simulations\" in Structural Dynamics.',
+    '',
+    'Awarded for exemplary performance as a TA in MATS 3801 at University of Minnesota, Twin Cities.',
+    'M&M Student Scholar Awardee for the conference paper \"Directed Hypersonic Strain Waves Imaged with Ultrafast Electron Microscopy\".',
+    '',
+    ''
 ];
 
-const newsExtraLinks = [
-'',
-'',
-'',
-'https://aca.scitation.org/doi/10.1063/1.5144682',
-'',
-'',
-'https://www.cambridge.org/core/journals/microscopy-and-microanalysis/article/directed-hypersonic-strain-waves-imaged-with-ultrafast-electron-microscopy/2E945314275B9ECFCE26536AC4F5B246',
-'',
-''
+const newsExtraLinks = [    
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    'https://aca.scitation.org/doi/10.1063/1.5144682',
+    '',
+    '',
+    'https://www.cambridge.org/core/journals/microscopy-and-microanalysis/article/directed-hypersonic-strain-waves-imaged-with-ultrafast-electron-microscopy/2E945314275B9ECFCE26536AC4F5B246',
+    '',
+    ''
 ];
 
 var testele = document.createElement("div");
